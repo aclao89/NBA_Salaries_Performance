@@ -28,7 +28,7 @@ Bonus: We can also identify which players are overpaid and underpaid based on sa
 #### Step 1: Import Python Packages
 For web scraping purposes, we will need requests and BeautifulSoup. Pandas and Numpy are popular packages for data manipulation and analysis. Matplotlib, plotly, chart_studio, and cufflinks are purposed for charts and visualizations.
 
-![python_packages]()
+![python_packages](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/python_packages.png)
 
 
 #### Step 2: Extract the table element from Basketball Reference page
