@@ -17,3 +17,26 @@ Bonus: We can also identify which players are overpaid and underpaid based on sa
 
 1. [Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2020_totals.html) - NBA Player Stats
 2. [HoopsHype](https://hoopshype.com/salaries/players/) - NBA Player Salary
+
+## Tools Used
+
+1. Jupyter Notebook
+2. Tableau **(Future work)**
+
+## Scraping Player Stats from 2019/2020 & 2020/2021 Seasons
+
+#### Step 1: Import Python Packages
+For web scraping purposes, we will need requests and BeautifulSoup. Pandas and Numpy are popular packages for data manipulation and analysis. Matplotlib, plotly, chart_studio, and cufflinks are purposed for charts and visualizations.
+
+![python_packages]()
+
+
+#### Step 2: Extract the table element from Basketball Reference page
+We use a *with* statement to open the 2020 Season stored as an html file. We will then parse the page with BeautifulSoup and locate the dataset by pointing to the html table tag *all_totals_stats* via the soup.find() method. Lastly, we have to cast the html table to a string and used the read_html() function to convert into a Pandas DataFrame.
+
+![extract_bballref](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/web_scrape_2020.png)
+
+#### Step 3: Use a *for* loop to extract the last 22 NBA Seasons, 2000 - 2022.
+We can use the similar *with* statement above but nested in a *for* loop. We added a "Year" column for distinction purposes and further analysis.
+
+![web_scrape_00_22 ](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/web_scrape_00_22.png)
