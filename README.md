@@ -1,7 +1,7 @@
 # Relationship between an NBA Player's Salary to Respective Performance
 ### Finding above average performers with below average salary
 
-[header_picture](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/salary_nba-768x384.jpg)
+![header_picture](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/salary_nba-768x384.jpg)
 
 ## Introduction
 
