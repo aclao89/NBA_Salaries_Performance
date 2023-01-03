@@ -46,9 +46,13 @@ Bonus: We can also identify which players are overpaid and underpaid based on sa
 ##### Player Salary Data
 
 1. Remove special characters from salary - In order to convert to numeric, we need to remove
-"$" and ",". This can be simply done with the .replace() method
+*"$"* and *","*. This can be simply done with the .replace() method
 
 ![remove_special](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/replace_special.png)
+
+2. After this, all salaries can be converted to a numeric data type with the *pd.to_numeric* function, applies to all columns except for the only non-numeric one, the player_names. We use the *dtypes* attribute to confirm this data type transformation.
+
+![to_numeric](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/convert_numeric.png)
 
 ##### Player Performance Data
 
@@ -58,8 +62,11 @@ Bonus: We can also identify which players are overpaid and underpaid based on sa
 
 The TOT row is an summation of that player's stats. However, TOT is not a real team so we will need to grab the name of the player's most recent team.
 
-The function below takes in a single dataframe and returns the record if there is only one row.
-
-If there are multiple rows for a player in a single season, it will take the total or TOT and replace the Team(Tm) with the most current team.
+The function below takes in a single dataframe and returns the record if there is only one row. If there are multiple rows for a player in a single season, it will take the total or TOT and replace the Team(Tm) with the most current team.
 
 ![team_fxn](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/team_fxn.png)
+
+
+2. Some players have an asterisk next to their name, possibly as a designation for other features. We will need to remove this so we can merge with the salary data.
+
+![replace_asterisk](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/replace_asterisk.png)
