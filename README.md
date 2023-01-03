@@ -83,4 +83,29 @@ This new dataframe, *merged_df_20*, contains the full stats for each player plus
 ![merged_20](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/merged_20_df.png)
 
 
-#### Data Exploration and Analysis
+## Data Exploration and Analysis
+
+#### Finding the Approximate Value & Pay-Per-Minute
+
+1. **Approximate Value** - As previously mentioned, I approximate a player's on-court performance with the *Approximate Value (AV)* metric, developed by Dean Oliver. The formula can be found [here](https://www.nbastuffer.com/analytics101/approximate-value/).
+
+2. **Pay per Minute Played** - Simply divide the salary for the year by the actual total of minutes played
+
+![av_metric](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/av_formula.png)
+
+#### Plot correlations
+
+1. The following scatter plot shows a right skewed or positive distribution where most values are clustered around the left tail of the distribution while the right tail of the distribution is longer.
+
+![scatter_plt](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/scatter_plt_20.png)
+
+
+We can use the *describe()* method over the *$_per_min-19/20* column for further details on the distribution. Over 75% of the data points are less than or equal to $15k, with the mean at $14k.
+
+![describe](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/describe_method.png)
+
+This information indicates the presence of outliers, such as players whose salary per minute is too high given the low amount of minutes played. Scenarios usually include injuries and/or vaccine requirement to play during the NBA bubble season.
+
+Luckily, we can use this data to set a salary per minute threshold to get a better sense of the distribution.
+
+![new_scatter](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/new_scatter.png)
