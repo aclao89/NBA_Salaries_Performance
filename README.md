@@ -114,6 +114,17 @@ Luckily, we can use this data to set a salary per minute threshold to get a bett
 
 1. Using the mean values, via the *.mean()* method, I can split the data into quadrants relative to the mean value for Approximate Value and Salary Per Minute.
 
+![new_scatter_function](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/new_scatter_fxn.png)
+
 We can do this with the *plt.axvline* and *plt.axhline* methods to draw vertical and horizontal lines, respectively, to identify the quadrants relative to the averages.
 
+Players with above-average AV value and below-average $ per minute are located in the upper left quadrant of the resulting graph below.
+
 ![new_scatter](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/new_scatter.png)
+
+
+2. Use Iplot - Iplot stands for interactive plot. Plotly allows you to generate graphs offline and save them in local machine. The plotly.offline.plot() function creates a standalone HTML that is saved locally and opened inside your web browser.
+
+Use plotly.offline.iplot() when working offline in a Jupyter Notebook to display the plot in the notebook. More info [here](https://www.tutorialspoint.com/plotly/plotly_online_and_offline_plotting.htm).
+
+![iplot_graph](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/iplot_scatter.png)
