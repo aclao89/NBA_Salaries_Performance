@@ -41,4 +41,25 @@ Bonus: We can also identify which players are overpaid and underpaid based on sa
 
 ![web_scrape_00_22 ](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/web_scrape_00_22.png)
 
-#### Step 2: Data Cleaning 
+#### Step 2: Data Cleaning
+
+##### Player Salary Data
+
+1. Remove special characters from salary - In order to convert to numeric, we need to remove
+"$" and ",". This can be simply done with the .replace() method
+
+![remove_special](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/replace_special.png)
+
+##### Player Performance Data
+
+1. It's not surprising that players can play be traded and thus play for multiple teams in one season. For example in the 1999-2000 season, Tariq-Abdul Wahad played for Orlando then was traded to Denver. Players whom played on more than one team per season are listed with an additional row with a Tm designation as TOT or Total.
+
+![tot_team_clean](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/tot_team_clean%20-%20Copy.png)
+
+The TOT row is an summation of that player's stats. However, TOT is not a real team so we will need to grab the name of the player's most recent team.
+
+The function below takes in a single dataframe and returns the record if there is only one row.
+
+If there are multiple rows for a player in a single season, it will take the total or TOT and replace the Team(Tm) with the most current team.
+
+![team_fxn](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/team_fxn.png)
