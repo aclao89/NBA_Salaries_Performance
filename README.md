@@ -123,8 +123,20 @@ Players with above-average AV value and below-average $ per minute are located i
 ![new_scatter](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/new_scatter.png)
 
 
-2. Use Iplot - Iplot stands for interactive plot. Plotly allows you to generate graphs offline and save them in local machine. The plotly.offline.plot() function creates a standalone HTML that is saved locally and opened inside your web browser.
+2. Use Iplot - Iplot stands for interactive plot. Plotly allows you to generate graphs offline and save them in local machine. The plotly.offline.plot() function creates a standalone HTML that is saved locally and opened inside your web browser. Use plotly.offline.iplot() when working offline in a Jupyter Notebook to display the plot in the notebook. More info [here](https://www.tutorialspoint.com/plotly/plotly_online_and_offline_plotting.htm).
 
-Use plotly.offline.iplot() when working offline in a Jupyter Notebook to display the plot in the notebook. More info [here](https://www.tutorialspoint.com/plotly/plotly_online_and_offline_plotting.htm).
+In the Jupyter notebook, you can hover over each point to access the player names with their respective salary per minute and Approximate Value metric. Feel free to dig in!
 
 ![iplot_graph](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/iplot_scatter.png)
+
+The players in the upper left quadrant represent a potential opportunity to invest in proven on-court performance with a *below-average* salary relative to the league.
+
+#### Generate a list of free-agents with high AV and below-average $ per minute
+
+1. We will use the original dataset *merged_20_df* to slice and remove any outliers. Essentially, we will use the same formula for the scatter plot but will not plot it.
+
+2. Additionally, I will store the values for on-court performance and salary metrics, and filters the data to only keep above-average performers with below-average pay in per minute.
+
+![high_roi](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/high_roi.png)
+
+![high_roi_filtered](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/high_roi_filtered.png)
