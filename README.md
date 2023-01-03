@@ -70,3 +70,17 @@ The function below takes in a single dataframe and returns the record if there i
 2. Some players have an asterisk next to their name, possibly as a designation for other features. We will need to remove this so we can merge with the salary data.
 
 ![replace_asterisk](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/replace_asterisk.png)
+
+
+#### Merge Player Stats and Salary DataFrames
+
+1. First, we use the *loc()* function to extract rows for the 2019-2020 season. We will merge this partitioned dataset with the salary data from HoopsHype. After we removed the aterisk from the player stats, we can merge on player names. We want to merge *left* to keep all the player stats to calculate our Approximate Value metric.
+
+![merge_function](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/merge_dfs.png)
+
+This new dataframe, *merged_df_20*, contains the full stats for each player plus their current and projected salary data for future seasons.
+
+![merged_20](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/merged_20_df.png)
+
+
+#### Data Exploration and Analysis
