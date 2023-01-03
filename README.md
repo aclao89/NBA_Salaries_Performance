@@ -106,6 +106,14 @@ We can use the *describe()* method over the *$_per_min-19/20* column for further
 
 This information indicates the presence of outliers, such as players whose salary per minute is too high given the low amount of minutes played. Scenarios usually include injuries and/or vaccine requirement to play during the NBA bubble season.
 
-Luckily, we can use this data to set a salary per minute threshold to get a better sense of the distribution.
+Luckily, we can use this data to set a salary per minute threshold to get a better sense of the distribution. The plot below shows the 75th percentile <= $15k per minute.
+
+![scatter_plt_2](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/scatter_plt_20_2.png)
+
+#### Player Clustering
+
+1. Using the mean values, via the *.mean()* method, I can split the data into quadrants relative to the mean value for Approximate Value and Salary Per Minute.
+
+We can do this with the *plt.axvline* and *plt.axhline* methods to draw vertical and horizontal lines, respectively, to identify the quadrants relative to the averages.
 
 ![new_scatter](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/new_scatter.png)
