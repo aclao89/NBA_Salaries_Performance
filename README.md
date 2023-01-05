@@ -135,8 +135,25 @@ The players in the upper left quadrant represent a potential opportunity to inve
 
 1. We will use the original dataset *merged_20_df* to slice and remove any outliers. Essentially, we will use the same formula for the scatter plot but will not plot it.
 
-2. Additionally, I will store the values for on-court performance and salary metrics, and filters the data to only keep above-average performers with below-average pay in per minute.
+2. Secondly, I will store the values for on-court performance and salary metrics, and filters the data to only keep above-average performers with below-average pay in per minute.
 
 ![high_roi](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/high_roi.png)
 
 ![high_roi_filtered](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/high_roi_filtered.png)
+
+3. Lastly, I want to consider only upcoming free-agents. I can do so by filtering salary for 2020/21 season to equal 0.
+
+![filter_agents](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/filter_agents.png)
+
+
+**Voila!** Below are the top 10 upcoming free agents sorted by Approximate Value. NBA Front office might be interested in these players, given they have the cap space to do so!
+
+![free_agent_list](https://github.com/aclao89/NBA_Salaries_Performance/blob/main/Images/free_agent_list.png)
+
+## Considerations
+
+If you are an avid basketball fan, you should see that all these players serve as quality, rotational players for their respective teams.
+
+The best player on the list, Serge Ibaka, won an NBA Champion Title with the Toronto Raptors back in the 2018-2019 season. Sounds like he might be underpaid for his level of production on the court but we will need more advance stats to make a sound judgement.
+
+We can expect these players to be in the conversation of contract negotiations with their own team or other teams who want a quality, role player with a below-average $ per minute of the league.
